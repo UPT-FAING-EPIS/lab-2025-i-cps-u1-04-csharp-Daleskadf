@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Comportamiento.Domain.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a2a22bf63361e6d637462c7e0908c5a877e9272")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+529e0a2e5fd3dd36606a82f9c4cbf4729b3a4039")]
 [assembly: System.Reflection.AssemblyProductAttribute("Comportamiento.Domain.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Comportamiento.Domain.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
