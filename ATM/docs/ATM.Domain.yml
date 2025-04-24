@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: ATM.Domain
+  commentId: N:ATM.Domain
+  id: ATM.Domain
+  children:
+  - ATM.Domain.ATM
+  - ATM.Domain.Account
+  - ATM.Domain.DepositCommand
+  - ATM.Domain.ICommand
+  - ATM.Domain.WithdrawCommand
+  langs:
+  - csharp
+  - vb
+  name: ATM.Domain
+  nameWithType: ATM.Domain
+  fullName: ATM.Domain
+  type: Namespace
+  assemblies:
+  - ATM.Domain
+references:
+- uid: ATM.Domain.Account
+  commentId: T:ATM.Domain.Account
+  parent: ATM.Domain
+  href: ATM.Domain.Account.html
+  name: Account
+  nameWithType: Account
+  fullName: ATM.Domain.Account
+- uid: ATM.Domain.ATM
+  commentId: T:ATM.Domain.ATM
+  href: ATM.Domain.ATM.html
+  name: ATM
+  nameWithType: ATM
+  fullName: ATM.Domain.ATM
+- uid: ATM.Domain.DepositCommand
+  commentId: T:ATM.Domain.DepositCommand
+  href: ATM.Domain.DepositCommand.html
+  name: DepositCommand
+  nameWithType: DepositCommand
+  fullName: ATM.Domain.DepositCommand
+- uid: ATM.Domain.ICommand
+  commentId: T:ATM.Domain.ICommand
+  parent: ATM.Domain
+  href: ATM.Domain.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ATM.Domain.ICommand
+- uid: ATM.Domain.WithdrawCommand
+  commentId: T:ATM.Domain.WithdrawCommand
+  href: ATM.Domain.WithdrawCommand.html
+  name: WithdrawCommand
+  nameWithType: WithdrawCommand
+  fullName: ATM.Domain.WithdrawCommand
+- uid: ATM.Domain
+  commentId: N:ATM.Domain
+  href: ATM.html
+  name: ATM.Domain
+  nameWithType: ATM.Domain
+  fullName: ATM.Domain
+  spec.csharp:
+  - uid: ATM
+    name: ATM
+    href: ATM.html
+  - name: .
+  - uid: ATM.Domain
+    name: Domain
+    href: ATM.Domain.html
+  spec.vb:
+  - uid: ATM
+    name: ATM
+    href: ATM.html
+  - name: .
+  - uid: ATM.Domain
+    name: Domain
+    href: ATM.Domain.html

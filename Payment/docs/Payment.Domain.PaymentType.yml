@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: Payment.Domain.PaymentType
+  commentId: T:Payment.Domain.PaymentType
+  id: PaymentType
+  parent: Payment.Domain
+  children:
+  - Payment.Domain.PaymentType.Cash
+  - Payment.Domain.PaymentType.CreditCard
+  - Payment.Domain.PaymentType.DebitCard
+  langs:
+  - csharp
+  - vb
+  name: PaymentType
+  nameWithType: PaymentType
+  fullName: Payment.Domain.PaymentType
+  type: Enum
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentService.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: PaymentType
+    path: Payment.Domain/PaymentService.cs
+    startLine: 28
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: public enum PaymentType
+    content.vb: Public Enum PaymentType
+- uid: Payment.Domain.PaymentType.CreditCard
+  commentId: F:Payment.Domain.PaymentType.CreditCard
+  id: CreditCard
+  parent: Payment.Domain.PaymentType
+  langs:
+  - csharp
+  - vb
+  name: CreditCard
+  nameWithType: PaymentType.CreditCard
+  fullName: Payment.Domain.PaymentType.CreditCard
+  type: Field
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentService.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: CreditCard
+    path: Payment.Domain/PaymentService.cs
+    startLine: 30
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: CreditCard = 1
+    return:
+      type: Payment.Domain.PaymentType
+- uid: Payment.Domain.PaymentType.DebitCard
+  commentId: F:Payment.Domain.PaymentType.DebitCard
+  id: DebitCard
+  parent: Payment.Domain.PaymentType
+  langs:
+  - csharp
+  - vb
+  name: DebitCard
+  nameWithType: PaymentType.DebitCard
+  fullName: Payment.Domain.PaymentType.DebitCard
+  type: Field
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentService.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: DebitCard
+    path: Payment.Domain/PaymentService.cs
+    startLine: 31
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: DebitCard = 2
+    return:
+      type: Payment.Domain.PaymentType
+- uid: Payment.Domain.PaymentType.Cash
+  commentId: F:Payment.Domain.PaymentType.Cash
+  id: Cash
+  parent: Payment.Domain.PaymentType
+  langs:
+  - csharp
+  - vb
+  name: Cash
+  nameWithType: PaymentType.Cash
+  fullName: Payment.Domain.PaymentType.Cash
+  type: Field
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentService.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Cash
+    path: Payment.Domain/PaymentService.cs
+    startLine: 32
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: Cash = 3
+    return:
+      type: Payment.Domain.PaymentType
+references:
+- uid: Payment.Domain
+  commentId: N:Payment.Domain
+  href: Payment.html
+  name: Payment.Domain
+  nameWithType: Payment.Domain
+  fullName: Payment.Domain
+  spec.csharp:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+  spec.vb:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+- uid: Payment.Domain.PaymentType
+  commentId: T:Payment.Domain.PaymentType
+  parent: Payment.Domain
+  href: Payment.Domain.PaymentType.html
+  name: PaymentType
+  nameWithType: PaymentType
+  fullName: Payment.Domain.PaymentType

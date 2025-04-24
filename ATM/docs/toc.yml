@@ -1,0 +1,29 @@
+### YamlMime:TableOfContent
+items:
+- uid: ATM.Domain
+  name: ATM.Domain
+  type: Namespace
+  items:
+  - uid: ATM.Domain.ATM
+    name: ATM
+    type: Class
+  - uid: ATM.Domain.Account
+    name: Account
+    type: Class
+  - uid: ATM.Domain.DepositCommand
+    name: DepositCommand
+    type: Class
+  - uid: ATM.Domain.ICommand
+    name: ICommand
+    type: Interface
+  - uid: ATM.Domain.WithdrawCommand
+    name: WithdrawCommand
+    type: Class
+- uid: ATM.Domain.Tests
+  name: ATM.Domain.Tests
+  type: Namespace
+  items:
+  - uid: ATM.Domain.Tests.ATMTests
+    name: ATMTests
+    type: Class
+memberLayout: SamePage

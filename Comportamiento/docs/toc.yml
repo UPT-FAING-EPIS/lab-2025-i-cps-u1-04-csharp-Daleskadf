@@ -1,0 +1,26 @@
+### YamlMime:TableOfContent
+items:
+- uid: Comportamiento.Domain
+  name: Comportamiento.Domain
+  type: Namespace
+  items:
+  - uid: Comportamiento.Domain.ConcreteObserver
+    name: ConcreteObserver
+    type: Class
+  - uid: Comportamiento.Domain.IObserver
+    name: IObserver
+    type: Interface
+  - uid: Comportamiento.Domain.ISubject
+    name: ISubject
+    type: Interface
+  - uid: Comportamiento.Domain.Subject
+    name: Subject
+    type: Class
+- uid: Comportamiento.Domain.Tests
+  name: Comportamiento.Domain.Tests
+  type: Namespace
+  items:
+  - uid: Comportamiento.Domain.Tests.ObserverTests
+    name: ObserverTests
+    type: Class
+memberLayout: SamePage

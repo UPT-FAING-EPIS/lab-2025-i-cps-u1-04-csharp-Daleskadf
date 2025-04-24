@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: Comportamiento.Domain.ISubject
+  commentId: T:Comportamiento.Domain.ISubject
+  id: ISubject
+  parent: Comportamiento.Domain
+  children:
+  - Comportamiento.Domain.ISubject.Attach(Comportamiento.Domain.IObserver)
+  - Comportamiento.Domain.ISubject.Detach(Comportamiento.Domain.IObserver)
+  - Comportamiento.Domain.ISubject.Notify
+  langs:
+  - csharp
+  - vb
+  name: ISubject
+  nameWithType: ISubject
+  fullName: Comportamiento.Domain.ISubject
+  type: Interface
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/ISubject.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: ISubject
+    path: Comportamiento.Domain/ISubject.cs
+    startLine: 2
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: public interface ISubject
+    content.vb: Public Interface ISubject
+- uid: Comportamiento.Domain.ISubject.Attach(Comportamiento.Domain.IObserver)
+  commentId: M:Comportamiento.Domain.ISubject.Attach(Comportamiento.Domain.IObserver)
+  id: Attach(Comportamiento.Domain.IObserver)
+  parent: Comportamiento.Domain.ISubject
+  langs:
+  - csharp
+  - vb
+  name: Attach(IObserver)
+  nameWithType: ISubject.Attach(IObserver)
+  fullName: Comportamiento.Domain.ISubject.Attach(Comportamiento.Domain.IObserver)
+  type: Method
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/ISubject.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Attach
+    path: Comportamiento.Domain/ISubject.cs
+    startLine: 4
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: void Attach(IObserver observer)
+    parameters:
+    - id: observer
+      type: Comportamiento.Domain.IObserver
+    content.vb: Sub Attach(observer As IObserver)
+  overload: Comportamiento.Domain.ISubject.Attach*
+- uid: Comportamiento.Domain.ISubject.Detach(Comportamiento.Domain.IObserver)
+  commentId: M:Comportamiento.Domain.ISubject.Detach(Comportamiento.Domain.IObserver)
+  id: Detach(Comportamiento.Domain.IObserver)
+  parent: Comportamiento.Domain.ISubject
+  langs:
+  - csharp
+  - vb
+  name: Detach(IObserver)
+  nameWithType: ISubject.Detach(IObserver)
+  fullName: Comportamiento.Domain.ISubject.Detach(Comportamiento.Domain.IObserver)
+  type: Method
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/ISubject.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Detach
+    path: Comportamiento.Domain/ISubject.cs
+    startLine: 5
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: void Detach(IObserver observer)
+    parameters:
+    - id: observer
+      type: Comportamiento.Domain.IObserver
+    content.vb: Sub Detach(observer As IObserver)
+  overload: Comportamiento.Domain.ISubject.Detach*
+- uid: Comportamiento.Domain.ISubject.Notify
+  commentId: M:Comportamiento.Domain.ISubject.Notify
+  id: Notify
+  parent: Comportamiento.Domain.ISubject
+  langs:
+  - csharp
+  - vb
+  name: Notify()
+  nameWithType: ISubject.Notify()
+  fullName: Comportamiento.Domain.ISubject.Notify()
+  type: Method
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/ISubject.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Notify
+    path: Comportamiento.Domain/ISubject.cs
+    startLine: 6
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: void Notify()
+    content.vb: Sub Notify()
+  overload: Comportamiento.Domain.ISubject.Notify*
+references:
+- uid: Comportamiento.Domain
+  commentId: N:Comportamiento.Domain
+  href: Comportamiento.html
+  name: Comportamiento.Domain
+  nameWithType: Comportamiento.Domain
+  fullName: Comportamiento.Domain
+  spec.csharp:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html
+  spec.vb:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html
+- uid: Comportamiento.Domain.ISubject.Attach*
+  commentId: Overload:Comportamiento.Domain.ISubject.Attach
+  href: Comportamiento.Domain.ISubject.html#Comportamiento_Domain_ISubject_Attach_Comportamiento_Domain_IObserver_
+  name: Attach
+  nameWithType: ISubject.Attach
+  fullName: Comportamiento.Domain.ISubject.Attach
+- uid: Comportamiento.Domain.IObserver
+  commentId: T:Comportamiento.Domain.IObserver
+  parent: Comportamiento.Domain
+  href: Comportamiento.Domain.IObserver.html
+  name: IObserver
+  nameWithType: IObserver
+  fullName: Comportamiento.Domain.IObserver
+- uid: Comportamiento.Domain.ISubject.Detach*
+  commentId: Overload:Comportamiento.Domain.ISubject.Detach
+  href: Comportamiento.Domain.ISubject.html#Comportamiento_Domain_ISubject_Detach_Comportamiento_Domain_IObserver_
+  name: Detach
+  nameWithType: ISubject.Detach
+  fullName: Comportamiento.Domain.ISubject.Detach
+- uid: Comportamiento.Domain.ISubject.Notify*
+  commentId: Overload:Comportamiento.Domain.ISubject.Notify
+  href: Comportamiento.Domain.ISubject.html#Comportamiento_Domain_ISubject_Notify
+  name: Notify
+  nameWithType: ISubject.Notify
+  fullName: Comportamiento.Domain.ISubject.Notify

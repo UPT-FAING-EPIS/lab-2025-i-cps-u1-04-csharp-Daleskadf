@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Payment.Domain.Tests
+  commentId: N:Payment.Domain.Tests
+  id: Payment.Domain.Tests
+  children:
+  - Payment.Domain.Tests.PaymentTests
+  langs:
+  - csharp
+  - vb
+  name: Payment.Domain.Tests
+  nameWithType: Payment.Domain.Tests
+  fullName: Payment.Domain.Tests
+  type: Namespace
+  assemblies:
+  - Payment.Domain.Tests
+references:
+- uid: Payment.Domain.Tests.PaymentTests
+  commentId: T:Payment.Domain.Tests.PaymentTests
+  href: Payment.Domain.Tests.PaymentTests.html
+  name: PaymentTests
+  nameWithType: PaymentTests
+  fullName: Payment.Domain.Tests.PaymentTests

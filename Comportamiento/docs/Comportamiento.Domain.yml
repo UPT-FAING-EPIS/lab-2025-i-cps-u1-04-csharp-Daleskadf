@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: Comportamiento.Domain
+  commentId: N:Comportamiento.Domain
+  id: Comportamiento.Domain
+  children:
+  - Comportamiento.Domain.ConcreteObserver
+  - Comportamiento.Domain.IObserver
+  - Comportamiento.Domain.ISubject
+  - Comportamiento.Domain.Subject
+  langs:
+  - csharp
+  - vb
+  name: Comportamiento.Domain
+  nameWithType: Comportamiento.Domain
+  fullName: Comportamiento.Domain
+  type: Namespace
+  assemblies:
+  - Comportamiento.Domain
+references:
+- uid: Comportamiento.Domain.ConcreteObserver
+  commentId: T:Comportamiento.Domain.ConcreteObserver
+  href: Comportamiento.Domain.ConcreteObserver.html
+  name: ConcreteObserver
+  nameWithType: ConcreteObserver
+  fullName: Comportamiento.Domain.ConcreteObserver
+- uid: Comportamiento.Domain.IObserver
+  commentId: T:Comportamiento.Domain.IObserver
+  parent: Comportamiento.Domain
+  href: Comportamiento.Domain.IObserver.html
+  name: IObserver
+  nameWithType: IObserver
+  fullName: Comportamiento.Domain.IObserver
+- uid: Comportamiento.Domain.ISubject
+  commentId: T:Comportamiento.Domain.ISubject
+  parent: Comportamiento.Domain
+  href: Comportamiento.Domain.ISubject.html
+  name: ISubject
+  nameWithType: ISubject
+  fullName: Comportamiento.Domain.ISubject
+- uid: Comportamiento.Domain.Subject
+  commentId: T:Comportamiento.Domain.Subject
+  href: Comportamiento.Domain.Subject.html
+  name: Subject
+  nameWithType: Subject
+  fullName: Comportamiento.Domain.Subject
+- uid: Comportamiento.Domain
+  commentId: N:Comportamiento.Domain
+  href: Comportamiento.html
+  name: Comportamiento.Domain
+  nameWithType: Comportamiento.Domain
+  fullName: Comportamiento.Domain
+  spec.csharp:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html
+  spec.vb:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html

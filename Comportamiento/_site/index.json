@@ -1,0 +1,57 @@
+{
+  "disenio.html": {
+    "href": "disenio.html",
+    "title": "| Comportamiento App",
+    "summary": "classDiagram ISubject : +Attach(observer) ISubject : +Detach(observer) ISubject : +Notify() IObserver : +Update(message) Subject : -observers : List Subject : -state : string Subject : +Attach(observer) Subject : +Detach(observer) Subject : +Notify() Subject : +State ConcreteObserver : -name : string ConcreteObserver : -state : string ConcreteObserver : +Update(message) ISubject <|-- Subject IObserver <|-- ConcreteObserver Subject \"1\" -- \"*\" IObserver : \"Notifica a\" ConcreteObserver \"1\" -- \"1\" Subject : \"Recibe notificación de\""
+  },
+  "docs/Comportamiento.Domain.ConcreteObserver.html": {
+    "href": "docs/Comportamiento.Domain.ConcreteObserver.html",
+    "title": "Class ConcreteObserver | Comportamiento App",
+    "summary": "Class ConcreteObserver Namespace Comportamiento.Domain Assembly Comportamiento.Domain.dll public class ConcreteObserver : IObserver Inheritance object ConcreteObserver Implements IObserver Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ConcreteObserver(string) public ConcreteObserver(string name) Parameters name string Properties State public string State { get; } Property Value string Methods Update(string) public void Update(string message) Parameters message string"
+  },
+  "docs/Comportamiento.Domain.IObserver.html": {
+    "href": "docs/Comportamiento.Domain.IObserver.html",
+    "title": "Interface IObserver | Comportamiento App",
+    "summary": "Interface IObserver Namespace Comportamiento.Domain Assembly Comportamiento.Domain.dll public interface IObserver Methods Update(string) void Update(string message) Parameters message string"
+  },
+  "docs/Comportamiento.Domain.ISubject.html": {
+    "href": "docs/Comportamiento.Domain.ISubject.html",
+    "title": "Interface ISubject | Comportamiento App",
+    "summary": "Interface ISubject Namespace Comportamiento.Domain Assembly Comportamiento.Domain.dll public interface ISubject Methods Attach(IObserver) void Attach(IObserver observer) Parameters observer IObserver Detach(IObserver) void Detach(IObserver observer) Parameters observer IObserver Notify() void Notify()"
+  },
+  "docs/Comportamiento.Domain.Subject.html": {
+    "href": "docs/Comportamiento.Domain.Subject.html",
+    "title": "Class Subject | Comportamiento App",
+    "summary": "Class Subject Namespace Comportamiento.Domain Assembly Comportamiento.Domain.dll public class Subject : ISubject Inheritance object Subject Implements ISubject Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties State public string State { get; set; } Property Value string Methods Attach(IObserver) public void Attach(IObserver observer) Parameters observer IObserver Detach(IObserver) public void Detach(IObserver observer) Parameters observer IObserver Notify() public void Notify()"
+  },
+  "docs/Comportamiento.Domain.Tests.ObserverTests.html": {
+    "href": "docs/Comportamiento.Domain.Tests.ObserverTests.html",
+    "title": "Class ObserverTests | Comportamiento App",
+    "summary": "Class ObserverTests Namespace Comportamiento.Domain.Tests Assembly Comportamiento.Domain.Tests.dll public class ObserverTests Inheritance object ObserverTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods TestObserverPattern() [Test] public void TestObserverPattern()"
+  },
+  "docs/Comportamiento.Domain.Tests.html": {
+    "href": "docs/Comportamiento.Domain.Tests.html",
+    "title": "Namespace Comportamiento.Domain.Tests | Comportamiento App",
+    "summary": "Namespace Comportamiento.Domain.Tests Classes ObserverTests"
+  },
+  "docs/Comportamiento.Domain.html": {
+    "href": "docs/Comportamiento.Domain.html",
+    "title": "Namespace Comportamiento.Domain | Comportamiento App",
+    "summary": "Namespace Comportamiento.Domain Classes ConcreteObserver Subject Interfaces IObserver ISubject"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Comportamiento App",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Comportamiento App",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| Comportamiento App",
+    "summary": "Patrón de Diseño: Observer Descripción El patrón Observer es un patrón de diseño de comportamiento que permite que un objeto (el subject) notifique a otros objetos (los observers) cuando su estado cambia. Este patrón es útil cuando necesitas mantener la coherencia entre un conjunto de objetos sin acoplarlos de manera estricta. En este proyecto, implementamos el patrón Observer utilizando las siguientes clases: ISubject: Define las operaciones que un subject debe implementar para poder ser observado. IObserver: Define las operaciones que un observer debe implementar para recibir notificaciones del subject. Subject: Implementa la lógica para mantener una lista de observadores y notificarles cuando su estado cambia. ConcreteObserver: Implementa la lógica para recibir las actualizaciones del subject y almacenar el estado actualizado. Crear la solución y los proyectos Primero, crea una nueva solución llamada Comportamiento con el siguiente comando: dotnet new sln -o Comportamiento cd Comportamiento dotnet new classlib -o Comportamiento.Domain dotnet sln add ./Comportamiento.Domain/Comportamiento.Domain.csproj dotnet new nunit -o Comportamiento.Domain.Tests dotnet sln add ./Comportamiento.Domain.Tests/Comportamiento.Domain.Tests.csproj dotnet add ./Comportamiento.Domain.Tests/Comportamiento.Domain.Tests.csproj reference ./Comportamiento.Domain/Comportamiento.Domain.csproj code . Implementación del Patrón Observer Definir la interfaz IObserver Se definió la interfaz IObserver que los observadores deben implementar para poder recibir actualizaciones del subject. Esta interfaz contiene el método Update: public interface IObserver { void Update(string message); } Definir la interfaz ISubject La interfaz ISubject define los métodos que un objeto debe implementar para poder gestionar sus observadores y notificarles cambios: public interface ISubject { void Attach(IObserver observer); void Detach(IObserver observer); void Notify(); } Definir la interfaz Subject La clase Subject implementa la interfaz ISubject y mantiene una lista de observadores. Cuando su estado cambia, notifica a todos los observadores registrados: public class Subject : ISubject { private List<IObserver> _observers = new List<IObserver>(); private string _state = \"\"; public string State { get { return _state; } set { _state = value; Notify(); } } public void Attach(IObserver observer) { _observers.Add(observer); } public void Detach(IObserver observer) { _observers.Remove(observer); } public void Notify() { foreach (var observer in _observers) { observer.Update(_state); } } } Definir la interfaz ConcreteObserver La clase ConcreteObserver implementa la interfaz IObserver y define cómo se maneja la actualización cuando el estado del subject cambia. También incluye una propiedad State que permite acceder al valor del estado actualizado: public class ConcreteObserver : IObserver { private string _name; private string _state; public string State => _state; public ConcreteObserver(string name) { _name = name; } public void Update(string message) { _state = message; Console.WriteLine($\"{_name} received update: {_state}\"); } } Pruebas Unitarias Se crearon pruebas unitarias para verificar que el patrón Observer funciona correctamente. Las pruebas aseguran que los observadores reciben la actualización cuando el subject cambia su estado. Se crea el archivo ObserverTests.cs en Comportamiento.Domain.Tests ```csharp using NUnit.Framework; using Comportamiento.Domain; namespace Comportamiento.Domain.Tests { public class ObserverTests { [Test] public void TestObserverPattern() { // Crear un Subject var subject = new Subject(); // Crear dos Observers var observer1 = new ConcreteObserver(\"Observer 1\"); var observer2 = new ConcreteObserver(\"Observer 2\"); // Attach los Observers al Subject subject.Attach(observer1); subject.Attach(observer2); // Cambiar el estado del Subject subject.State = \"State 1\"; // Verificar que los Observers recibieron el mensaje Assert.AreEqual(\"State 1\", observer1.State); Assert.AreEqual(\"State 1\", observer2.State); } } } ``` Diagrama del del proyecto Observer classDiagram ISubject : +Attach(observer) ISubject : +Detach(observer) ISubject : +Notify() IObserver : +Update(message) Subject : -observers : List Subject : -state : string Subject : +Attach(observer) Subject : +Detach(observer) Subject : +Notify() Subject : +State ConcreteObserver : -name : string ConcreteObserver : -state : string ConcreteObserver : +Update(message) ISubject <|-- Subject IObserver <|-- ConcreteObserver Subject \"1\" -- \"*\" IObserver : \"Notifica a\" ConcreteObserver \"1\" -- \"1\" Subject : \"Recibe notificación de\""
+  }
+}

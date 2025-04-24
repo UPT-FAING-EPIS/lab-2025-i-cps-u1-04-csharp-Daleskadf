@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: ATM.Domain.ICommand
+  commentId: T:ATM.Domain.ICommand
+  id: ICommand
+  parent: ATM.Domain
+  children:
+  - ATM.Domain.ICommand.Execute
+  langs:
+  - csharp
+  - vb
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ATM.Domain.ICommand
+  type: Interface
+  source:
+    remote:
+      path: ATM/ATM.Domain/ICommand.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: ICommand
+    path: ATM.Domain/ICommand.cs
+    startLine: 4
+  assemblies:
+  - ATM.Domain
+  namespace: ATM.Domain
+  syntax:
+    content: public interface ICommand
+    content.vb: Public Interface ICommand
+- uid: ATM.Domain.ICommand.Execute
+  commentId: M:ATM.Domain.ICommand.Execute
+  id: Execute
+  parent: ATM.Domain.ICommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: ATM.Domain.ICommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: ATM/ATM.Domain/ICommand.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Execute
+    path: ATM.Domain/ICommand.cs
+    startLine: 6
+  assemblies:
+  - ATM.Domain
+  namespace: ATM.Domain
+  syntax:
+    content: void Execute()
+    content.vb: Sub Execute()
+  overload: ATM.Domain.ICommand.Execute*
+references:
+- uid: ATM.Domain
+  commentId: N:ATM.Domain
+  href: ATM.html
+  name: ATM.Domain
+  nameWithType: ATM.Domain
+  fullName: ATM.Domain
+  spec.csharp:
+  - uid: ATM
+    name: ATM
+    href: ATM.html
+  - name: .
+  - uid: ATM.Domain
+    name: Domain
+    href: ATM.Domain.html
+  spec.vb:
+  - uid: ATM
+    name: ATM
+    href: ATM.html
+  - name: .
+  - uid: ATM.Domain
+    name: Domain
+    href: ATM.Domain.html
+- uid: ATM.Domain.ICommand.Execute*
+  commentId: Overload:ATM.Domain.ICommand.Execute
+  href: ATM.Domain.ICommand.html#ATM_Domain_ICommand_Execute
+  name: Execute
+  nameWithType: ICommand.Execute
+  fullName: ATM.Domain.ICommand.Execute

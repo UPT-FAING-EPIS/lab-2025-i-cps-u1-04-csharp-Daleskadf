@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Payment.Domain.IPaymentStrategy
+  commentId: T:Payment.Domain.IPaymentStrategy
+  id: IPaymentStrategy
+  parent: Payment.Domain
+  children:
+  - Payment.Domain.IPaymentStrategy.Pay(System.Double)
+  langs:
+  - csharp
+  - vb
+  name: IPaymentStrategy
+  nameWithType: IPaymentStrategy
+  fullName: Payment.Domain.IPaymentStrategy
+  type: Interface
+  source:
+    remote:
+      path: Payment/Payment.Domain/IPaymentStrategy.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: IPaymentStrategy
+    path: Payment.Domain/IPaymentStrategy.cs
+    startLine: 2
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: public interface IPaymentStrategy
+    content.vb: Public Interface IPaymentStrategy
+- uid: Payment.Domain.IPaymentStrategy.Pay(System.Double)
+  commentId: M:Payment.Domain.IPaymentStrategy.Pay(System.Double)
+  id: Pay(System.Double)
+  parent: Payment.Domain.IPaymentStrategy
+  langs:
+  - csharp
+  - vb
+  name: Pay(double)
+  nameWithType: IPaymentStrategy.Pay(double)
+  fullName: Payment.Domain.IPaymentStrategy.Pay(double)
+  type: Method
+  source:
+    remote:
+      path: Payment/Payment.Domain/IPaymentStrategy.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf
+    id: Pay
+    path: Payment.Domain/IPaymentStrategy.cs
+    startLine: 4
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: bool Pay(double amount)
+    parameters:
+    - id: amount
+      type: System.Double
+    return:
+      type: System.Boolean
+    content.vb: Function Pay(amount As Double) As Boolean
+  overload: Payment.Domain.IPaymentStrategy.Pay*
+  nameWithType.vb: IPaymentStrategy.Pay(Double)
+  fullName.vb: Payment.Domain.IPaymentStrategy.Pay(Double)
+  name.vb: Pay(Double)
+references:
+- uid: Payment.Domain
+  commentId: N:Payment.Domain
+  href: Payment.html
+  name: Payment.Domain
+  nameWithType: Payment.Domain
+  fullName: Payment.Domain
+  spec.csharp:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+  spec.vb:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+- uid: Payment.Domain.IPaymentStrategy.Pay*
+  commentId: Overload:Payment.Domain.IPaymentStrategy.Pay
+  href: Payment.Domain.IPaymentStrategy.html#Payment_Domain_IPaymentStrategy_Pay_System_Double_
+  name: Pay
+  nameWithType: IPaymentStrategy.Pay
+  fullName: Payment.Domain.IPaymentStrategy.Pay
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
