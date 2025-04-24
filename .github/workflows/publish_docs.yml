@@ -1,0 +1,52 @@
+name: Publicar Docs con DocFX
+
+on:
+  push:
+    branches:
+      - main  # O la rama que utilices para hacer cambios en la documentación
+
+jobs:
+  docfx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+
+      - name: Install DocFx tool
+        run: dotnet tool update -g docfx
+
+      - name: Generar metadata con DocFx para Payment
+        run: docfx metadata Payment/docfx.json
+
+      - name: Generar metadata con DocFx para ATM
+        run: docfx metadata ATM/docfx.json
+
+      - name: Generar metadata con DocFx para Comportamiento
+        run: docfx metadata Comportamiento/docfx.json
+
+      - name: Construir sitio de documentación para Payment
+        run: docfx build Payment/docfx.json
+
+      - name: Construir sitio de documentación para ATM
+        run: docfx build ATM/docfx.json
+
+      - name: Construir sitio de documentación para Comportamiento
+        run: docfx build Comportamiento/docfx.json
+
+      - name: Subir GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Publicar desde la raíz del repositorio
+          # Publicar el contenido de Payment en la carpeta Payment/
+          folder_payment: Payment/_site
+          # Publicar el contenido de ATM en la carpeta ATM/
+          folder_atm: ATM/_site
+          # Publicar el contenido de Comportamiento en la carpeta Comportamiento/
+          folder_comportamiento: Comportamiento/_site
