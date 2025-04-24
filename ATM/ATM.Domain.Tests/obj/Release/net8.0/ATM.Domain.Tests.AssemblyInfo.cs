@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATM.Domain.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+529e0a2e5fd3dd36606a82f9c4cbf4729b3a4039")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d445689d862674fe24dc5337b90d5338b402e244")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATM.Domain.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATM.Domain.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
