@@ -160,15 +160,15 @@ classDiagram
     
     IObserver : +Update(message)
     
-    Subject : -observers : List
-    Subject : -state : string
+    Subject : -observers
+    Subject : -state
     Subject : +Attach(observer)
     Subject : +Detach(observer)
     Subject : +Notify()
     Subject : +State
 
-    ConcreteObserver : -name : string
-    ConcreteObserver : -state : string
+    ConcreteObserver : -name
+    ConcreteObserver : -state
     ConcreteObserver : +Update(message)
 
     ISubject <|-- Subject
