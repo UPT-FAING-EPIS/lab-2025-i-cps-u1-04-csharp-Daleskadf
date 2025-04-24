@@ -1,3 +1,4 @@
+%% mermaid.md
 ```mermaid
 classDiagram
 

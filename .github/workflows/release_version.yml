@@ -48,8 +48,8 @@ jobs:
     # Construir y empaquetar proyecto Comportamiento
     - name: Build and Pack Comportamiento project
       run: |
-        dotnet build Comportamiento/Comportamiento.Domain/ATM.Domain.csproj -c Release
-        dotnet pack Comportamiento/Comportamiento.Domain/ATM.Domain.csproj -c Release -o out
+        dotnet build Comportamiento/Comportamiento.Domain/Comportamiento.Domain.csproj -c Release
+        dotnet pack Comportamiento/Comportamiento.Domain/Comportamiento.Domain.csproj -c Release -o out
 
     # Crear tag para Payment
     - name: Create Git tag for Payment
