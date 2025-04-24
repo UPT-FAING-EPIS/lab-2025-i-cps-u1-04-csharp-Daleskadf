@@ -120,7 +120,7 @@ jobs:
     - name: Publish Release for Payment
       uses: ncipollo/release-action@v1
       with:
-        tag: ${{ env.NOTIFICATIONS_NAME }}
+        tag: ${{ env.PAYMENT_NAME }}
         name: "Release ${{ env.PAYMENT_NAME }}"
         files: out/*.nupkg
         token: ${{ secrets.GH_TOKEN }}
@@ -128,7 +128,7 @@ jobs:
     - name: Publish Release for ATM
       uses: ncipollo/release-action@v1
       with:
-        tag: ${{ env.CUSTOMERAPP_NAME }}
+        tag: ${{ env.ATM_NAME }}
         name: "Release ${{ env.ATM_NAME }}"
         files: out/*.nupkg
         token: ${{ secrets.GH_TOKEN }}
@@ -136,7 +136,7 @@ jobs:
     - name: Publish Release for Comportamiento
       uses: ncipollo/release-action@v1
       with:
-        tag: ${{ env.CUSTOMERAPP_NAME }}
+        tag: ${{ env.COMPORTAMIENTO_NAME }}
         name: "Release ${{ env.COMPORTAMIENTO_NAME }}"
         files: out/*.nupkg
         token: ${{ secrets.GH_TOKEN }}
