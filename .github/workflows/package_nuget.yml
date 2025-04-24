@@ -1,0 +1,103 @@
+name: Package NuGet and Sonar
+
+on:
+  push:
+    branches:
+      - main  # O la rama que desees
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonar_analysis:
+    name: Build, Test, and Analyze with SonarCloud
+    runs-on: windows-latest
+
+    steps:
+      # Paso 1: Checkout del código fuente
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Paso 2: Configurar .NET
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+
+      # Paso 3: Instalar SonarScanner for MSBuild (actualizar si es necesario)
+      - name: Install SonarScanner for MSBuild
+        run: |
+          dotnet tool update --global dotnet-sonarscanner
+
+      # Paso 4: Ejecutar pruebas unitarias para Payment.Domain
+      - name: Run unit tests for Payment.Domain
+        run: dotnet test "Payment/Payment.Domain.Tests/Payment.Domain.Tests.csproj" --logger "trx;LogFileName=test_results_payment.trx"
+
+      # Paso 5: Ejecutar pruebas unitarias para ATM.Domain
+      - name: Run unit tests for ATM.Domain
+        run: dotnet test "ATM/ATM.Domain.Tests/ATM.Domain.Tests.csproj" --logger "trx;LogFileName=test_results_atm.trx"
+
+      # Paso 6: Realizar análisis con SonarCloud
+      - name: Set up JDK 17 (Requerido por SonarQube)
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
+
+      - name: SonarCloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          dotnet sonarscanner begin /k:"patrones-daleska_payment-atm" /o:"patrones-daleska" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build "Payment/Payment.sln" --configuration Release
+          dotnet build "ATM/ATM.sln" --configuration Release
+          dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+
+  nuget_package:
+    name: Build, Pack, and Publish NuGet Package
+    runs-on: ubuntu-latest  # Se ejecuta en Ubuntu
+
+    steps:
+      # Paso 1: Checkout del código fuente
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Paso 2: Configurar .NET
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
+
+      # Paso 3: Restaurar dependencias
+      - name: Restore dependencies
+        run: dotnet restore Payment/Payment.sln
+
+      - name: Restore dependencies for Notifications
+        run: dotnet restore ATM/ATM.sln
+
+      # Paso 4: Construir y empaquetar Payment.Domain
+      - name: Build and pack Payment.Domain project
+        run: |
+          dotnet build "Payment/Payment.Domain/Payment.Domain.csproj" --configuration Release
+          dotnet pack "Payment/Payment.Domain/Payment.Domain.csproj" --configuration Release --output ./nupkg
+
+      # Paso 5: Construir y empaquetar ATM.Domain
+      - name: Build and pack ATM.Domain project
+        run: |
+          dotnet build "ATM/ATM.Domain/ATM.Domain.csproj" --configuration Release
+          dotnet pack "ATM/ATM.Domain/ATM.Domain.csproj" --configuration Release --output ./nupkg
+
+      # Paso 6: Verificar que los paquetes NuGet se han generado
+      - name: Verify NuGet package exists
+        run: |
+          ls ./nupkg  # Verifica que los archivos .nupkg se han generado
+
+      # Paso 7: Publicar el paquete NuGet en GitHub Packages
+      - name: Publish NuGet package to GitHub Packages
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          dotnet nuget push ./nupkg/*.nupkg --source "https://nuget.pkg.github.com/Daleskadf/index.json" --api-key "$GH_TOKEN" --skip-duplicate

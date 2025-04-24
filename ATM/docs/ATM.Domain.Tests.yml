@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ATM.Domain.Tests
+  commentId: N:ATM.Domain.Tests
+  id: ATM.Domain.Tests
+  children:
+  - ATM.Domain.Tests.ATMTests
+  langs:
+  - csharp
+  - vb
+  name: ATM.Domain.Tests
+  nameWithType: ATM.Domain.Tests
+  fullName: ATM.Domain.Tests
+  type: Namespace
+  assemblies:
+  - ATM.Domain.Tests
+references:
+- uid: ATM.Domain.Tests.ATMTests
+  commentId: T:ATM.Domain.Tests.ATMTests
+  href: ATM.Domain.Tests.ATMTests.html
+  name: ATMTests
+  nameWithType: ATMTests
+  fullName: ATM.Domain.Tests.ATMTests

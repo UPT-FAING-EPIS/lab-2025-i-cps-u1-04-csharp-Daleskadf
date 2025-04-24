@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: Payment.Domain
+  commentId: N:Payment.Domain
+  id: Payment.Domain
+  children:
+  - Payment.Domain.CashPaymentStrategy
+  - Payment.Domain.CreditCardPaymentStrategy
+  - Payment.Domain.DebitCardPaymentStrategy
+  - Payment.Domain.IPaymentStrategy
+  - Payment.Domain.PaymentContext
+  - Payment.Domain.PaymentService
+  - Payment.Domain.PaymentType
+  langs:
+  - csharp
+  - vb
+  name: Payment.Domain
+  nameWithType: Payment.Domain
+  fullName: Payment.Domain
+  type: Namespace
+  assemblies:
+  - Payment.Domain
+references:
+- uid: Payment.Domain.CashPaymentStrategy
+  commentId: T:Payment.Domain.CashPaymentStrategy
+  href: Payment.Domain.CashPaymentStrategy.html
+  name: CashPaymentStrategy
+  nameWithType: CashPaymentStrategy
+  fullName: Payment.Domain.CashPaymentStrategy
+- uid: Payment.Domain.CreditCardPaymentStrategy
+  commentId: T:Payment.Domain.CreditCardPaymentStrategy
+  href: Payment.Domain.CreditCardPaymentStrategy.html
+  name: CreditCardPaymentStrategy
+  nameWithType: CreditCardPaymentStrategy
+  fullName: Payment.Domain.CreditCardPaymentStrategy
+- uid: Payment.Domain.DebitCardPaymentStrategy
+  commentId: T:Payment.Domain.DebitCardPaymentStrategy
+  href: Payment.Domain.DebitCardPaymentStrategy.html
+  name: DebitCardPaymentStrategy
+  nameWithType: DebitCardPaymentStrategy
+  fullName: Payment.Domain.DebitCardPaymentStrategy
+- uid: Payment.Domain.IPaymentStrategy
+  commentId: T:Payment.Domain.IPaymentStrategy
+  parent: Payment.Domain
+  href: Payment.Domain.IPaymentStrategy.html
+  name: IPaymentStrategy
+  nameWithType: IPaymentStrategy
+  fullName: Payment.Domain.IPaymentStrategy
+- uid: Payment.Domain.PaymentContext
+  commentId: T:Payment.Domain.PaymentContext
+  href: Payment.Domain.PaymentContext.html
+  name: PaymentContext
+  nameWithType: PaymentContext
+  fullName: Payment.Domain.PaymentContext
+- uid: Payment.Domain.PaymentService
+  commentId: T:Payment.Domain.PaymentService
+  href: Payment.Domain.PaymentService.html
+  name: PaymentService
+  nameWithType: PaymentService
+  fullName: Payment.Domain.PaymentService
+- uid: Payment.Domain.PaymentType
+  commentId: T:Payment.Domain.PaymentType
+  parent: Payment.Domain
+  href: Payment.Domain.PaymentType.html
+  name: PaymentType
+  nameWithType: PaymentType
+  fullName: Payment.Domain.PaymentType
+- uid: Payment.Domain
+  commentId: N:Payment.Domain
+  href: Payment.html
+  name: Payment.Domain
+  nameWithType: Payment.Domain
+  fullName: Payment.Domain
+  spec.csharp:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+  spec.vb:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html

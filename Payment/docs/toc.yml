@@ -1,0 +1,25 @@
+### YamlMime:TableOfContent
+items:
+- uid: Payment.Domain
+  name: Payment.Domain
+  items:
+  - uid: Payment.Domain.CashPaymentStrategy
+    name: CashPaymentStrategy
+  - uid: Payment.Domain.CreditCardPaymentStrategy
+    name: CreditCardPaymentStrategy
+  - uid: Payment.Domain.DebitCardPaymentStrategy
+    name: DebitCardPaymentStrategy
+  - uid: Payment.Domain.IPaymentStrategy
+    name: IPaymentStrategy
+  - uid: Payment.Domain.PaymentContext
+    name: PaymentContext
+  - uid: Payment.Domain.PaymentService
+    name: PaymentService
+  - uid: Payment.Domain.PaymentType
+    name: PaymentType
+- uid: Payment.Domain.Tests
+  name: Payment.Domain.Tests
+  items:
+  - uid: Payment.Domain.Tests.PaymentTests
+    name: PaymentTests
+memberLayout: SamePage

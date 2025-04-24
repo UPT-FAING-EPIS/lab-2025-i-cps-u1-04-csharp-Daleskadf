@@ -1,0 +1,165 @@
+{
+  "source_base_path": "C:/Users/dales/OneDrive/Desktop/ooo/pat_lab4/lab-2025-i-cps-u1-04-csharp-Daleskadf/ATM",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "disenio.md",
+      "output": {
+        ".html": {
+          "relative_path": "disenio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.ATM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.ATM.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.DepositCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.DepositCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.ICommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.Tests.ATMTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.Tests.ATMTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.Tests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.WithdrawCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.WithdrawCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/ATM.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ATM.Domain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

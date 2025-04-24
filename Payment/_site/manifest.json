@@ -1,0 +1,185 @@
+{
+  "source_base_path": "C:/Users/dales/OneDrive/Desktop/ooo/pat_lab4/lab-2025-i-cps-u1-04-csharp-Daleskadf/Payment",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "disenio.md",
+      "output": {
+        ".html": {
+          "relative_path": "disenio.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.CashPaymentStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.CashPaymentStrategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.CreditCardPaymentStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.CreditCardPaymentStrategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.DebitCardPaymentStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.DebitCardPaymentStrategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.IPaymentStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.IPaymentStrategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.PaymentContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.PaymentContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.PaymentService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.PaymentService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.PaymentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.PaymentType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.Tests.PaymentTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.Tests.PaymentTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.Tests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/Payment.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Payment.Domain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

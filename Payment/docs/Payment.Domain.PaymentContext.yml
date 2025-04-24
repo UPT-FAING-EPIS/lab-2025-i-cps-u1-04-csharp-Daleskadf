@@ -1,0 +1,404 @@
+### YamlMime:ManagedReference
+items:
+- uid: Payment.Domain.PaymentContext
+  commentId: T:Payment.Domain.PaymentContext
+  id: PaymentContext
+  parent: Payment.Domain
+  children:
+  - Payment.Domain.PaymentContext.Pay(System.Double)
+  - Payment.Domain.PaymentContext.SetPaymentStrategy(Payment.Domain.IPaymentStrategy)
+  langs:
+  - csharp
+  - vb
+  name: PaymentContext
+  nameWithType: PaymentContext
+  fullName: Payment.Domain.PaymentContext
+  type: Class
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentContext.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf.git
+    id: PaymentContext
+    path: Payment.Domain/PaymentContext.cs
+    startLine: 2
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: public class PaymentContext
+    content.vb: Public Class PaymentContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Payment.Domain.PaymentContext.SetPaymentStrategy(Payment.Domain.IPaymentStrategy)
+  commentId: M:Payment.Domain.PaymentContext.SetPaymentStrategy(Payment.Domain.IPaymentStrategy)
+  id: SetPaymentStrategy(Payment.Domain.IPaymentStrategy)
+  parent: Payment.Domain.PaymentContext
+  langs:
+  - csharp
+  - vb
+  name: SetPaymentStrategy(IPaymentStrategy)
+  nameWithType: PaymentContext.SetPaymentStrategy(IPaymentStrategy)
+  fullName: Payment.Domain.PaymentContext.SetPaymentStrategy(Payment.Domain.IPaymentStrategy)
+  type: Method
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentContext.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf.git
+    id: SetPaymentStrategy
+    path: Payment.Domain/PaymentContext.cs
+    startLine: 9
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: public void SetPaymentStrategy(IPaymentStrategy strategy)
+    parameters:
+    - id: strategy
+      type: Payment.Domain.IPaymentStrategy
+    content.vb: Public Sub SetPaymentStrategy(strategy As IPaymentStrategy)
+  overload: Payment.Domain.PaymentContext.SetPaymentStrategy*
+- uid: Payment.Domain.PaymentContext.Pay(System.Double)
+  commentId: M:Payment.Domain.PaymentContext.Pay(System.Double)
+  id: Pay(System.Double)
+  parent: Payment.Domain.PaymentContext
+  langs:
+  - csharp
+  - vb
+  name: Pay(double)
+  nameWithType: PaymentContext.Pay(double)
+  fullName: Payment.Domain.PaymentContext.Pay(double)
+  type: Method
+  source:
+    remote:
+      path: Payment/Payment.Domain/PaymentContext.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf.git
+    id: Pay
+    path: Payment.Domain/PaymentContext.cs
+    startLine: 15
+  assemblies:
+  - Payment.Domain
+  namespace: Payment.Domain
+  syntax:
+    content: public bool Pay(double amount)
+    parameters:
+    - id: amount
+      type: System.Double
+    return:
+      type: System.Boolean
+    content.vb: Public Function Pay(amount As Double) As Boolean
+  overload: Payment.Domain.PaymentContext.Pay*
+  nameWithType.vb: PaymentContext.Pay(Double)
+  fullName.vb: Payment.Domain.PaymentContext.Pay(Double)
+  name.vb: Pay(Double)
+references:
+- uid: Payment.Domain
+  commentId: N:Payment.Domain
+  href: Payment.html
+  name: Payment.Domain
+  nameWithType: Payment.Domain
+  fullName: Payment.Domain
+  spec.csharp:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+  spec.vb:
+  - uid: Payment
+    name: Payment
+    href: Payment.html
+  - name: .
+  - uid: Payment.Domain
+    name: Domain
+    href: Payment.Domain.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Payment.Domain.PaymentContext.SetPaymentStrategy*
+  commentId: Overload:Payment.Domain.PaymentContext.SetPaymentStrategy
+  href: Payment.Domain.PaymentContext.html#Payment_Domain_PaymentContext_SetPaymentStrategy_Payment_Domain_IPaymentStrategy_
+  name: SetPaymentStrategy
+  nameWithType: PaymentContext.SetPaymentStrategy
+  fullName: Payment.Domain.PaymentContext.SetPaymentStrategy
+- uid: Payment.Domain.IPaymentStrategy
+  commentId: T:Payment.Domain.IPaymentStrategy
+  parent: Payment.Domain
+  href: Payment.Domain.IPaymentStrategy.html
+  name: IPaymentStrategy
+  nameWithType: IPaymentStrategy
+  fullName: Payment.Domain.IPaymentStrategy
+- uid: Payment.Domain.PaymentContext.Pay*
+  commentId: Overload:Payment.Domain.PaymentContext.Pay
+  href: Payment.Domain.PaymentContext.html#Payment_Domain_PaymentContext_Pay_System_Double_
+  name: Pay
+  nameWithType: PaymentContext.Pay
+  fullName: Payment.Domain.PaymentContext.Pay
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
