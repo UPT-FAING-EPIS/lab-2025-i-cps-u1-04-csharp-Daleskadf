@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Comportamiento.Domain.IObserver
+  commentId: T:Comportamiento.Domain.IObserver
+  id: IObserver
+  parent: Comportamiento.Domain
+  children:
+  - Comportamiento.Domain.IObserver.Update(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IObserver
+  nameWithType: IObserver
+  fullName: Comportamiento.Domain.IObserver
+  type: Interface
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/IObserver.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf.git
+    id: IObserver
+    path: Comportamiento.Domain/IObserver.cs
+    startLine: 2
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: public interface IObserver
+    content.vb: Public Interface IObserver
+- uid: Comportamiento.Domain.IObserver.Update(System.String)
+  commentId: M:Comportamiento.Domain.IObserver.Update(System.String)
+  id: Update(System.String)
+  parent: Comportamiento.Domain.IObserver
+  langs:
+  - csharp
+  - vb
+  name: Update(string)
+  nameWithType: IObserver.Update(string)
+  fullName: Comportamiento.Domain.IObserver.Update(string)
+  type: Method
+  source:
+    remote:
+      path: Comportamiento/Comportamiento.Domain/IObserver.cs
+      branch: main
+      repo: https://github.com/UPT-FAING-EPIS/lab-2025-i-cps-u1-04-csharp-Daleskadf.git
+    id: Update
+    path: Comportamiento.Domain/IObserver.cs
+    startLine: 4
+  assemblies:
+  - Comportamiento.Domain
+  namespace: Comportamiento.Domain
+  syntax:
+    content: void Update(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Sub Update(message As String)
+  overload: Comportamiento.Domain.IObserver.Update*
+  nameWithType.vb: IObserver.Update(String)
+  fullName.vb: Comportamiento.Domain.IObserver.Update(String)
+  name.vb: Update(String)
+references:
+- uid: Comportamiento.Domain
+  commentId: N:Comportamiento.Domain
+  href: Comportamiento.html
+  name: Comportamiento.Domain
+  nameWithType: Comportamiento.Domain
+  fullName: Comportamiento.Domain
+  spec.csharp:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html
+  spec.vb:
+  - uid: Comportamiento
+    name: Comportamiento
+    href: Comportamiento.html
+  - name: .
+  - uid: Comportamiento.Domain
+    name: Domain
+    href: Comportamiento.Domain.html
+- uid: Comportamiento.Domain.IObserver.Update*
+  commentId: Overload:Comportamiento.Domain.IObserver.Update
+  href: Comportamiento.Domain.IObserver.html#Comportamiento_Domain_IObserver_Update_System_String_
+  name: Update
+  nameWithType: IObserver.Update
+  fullName: Comportamiento.Domain.IObserver.Update
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

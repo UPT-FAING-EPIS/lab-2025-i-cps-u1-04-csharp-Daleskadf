@@ -1,0 +1,21 @@
+{
+  "Comportamiento.Domain": "Comportamiento.Domain.yml",
+  "Comportamiento.Domain.ConcreteObserver": "Comportamiento.Domain.ConcreteObserver.yml",
+  "Comportamiento.Domain.ConcreteObserver.#ctor(System.String)": "Comportamiento.Domain.ConcreteObserver.yml",
+  "Comportamiento.Domain.ConcreteObserver.State": "Comportamiento.Domain.ConcreteObserver.yml",
+  "Comportamiento.Domain.ConcreteObserver.Update(System.String)": "Comportamiento.Domain.ConcreteObserver.yml",
+  "Comportamiento.Domain.IObserver": "Comportamiento.Domain.IObserver.yml",
+  "Comportamiento.Domain.IObserver.Update(System.String)": "Comportamiento.Domain.IObserver.yml",
+  "Comportamiento.Domain.ISubject": "Comportamiento.Domain.ISubject.yml",
+  "Comportamiento.Domain.ISubject.Attach(Comportamiento.Domain.IObserver)": "Comportamiento.Domain.ISubject.yml",
+  "Comportamiento.Domain.ISubject.Detach(Comportamiento.Domain.IObserver)": "Comportamiento.Domain.ISubject.yml",
+  "Comportamiento.Domain.ISubject.Notify": "Comportamiento.Domain.ISubject.yml",
+  "Comportamiento.Domain.Subject": "Comportamiento.Domain.Subject.yml",
+  "Comportamiento.Domain.Subject.Attach(Comportamiento.Domain.IObserver)": "Comportamiento.Domain.Subject.yml",
+  "Comportamiento.Domain.Subject.Detach(Comportamiento.Domain.IObserver)": "Comportamiento.Domain.Subject.yml",
+  "Comportamiento.Domain.Subject.Notify": "Comportamiento.Domain.Subject.yml",
+  "Comportamiento.Domain.Subject.State": "Comportamiento.Domain.Subject.yml",
+  "Comportamiento.Domain.Tests": "Comportamiento.Domain.Tests.yml",
+  "Comportamiento.Domain.Tests.ObserverTests": "Comportamiento.Domain.Tests.ObserverTests.yml",
+  "Comportamiento.Domain.Tests.ObserverTests.TestObserverPattern": "Comportamiento.Domain.Tests.ObserverTests.yml"
+}

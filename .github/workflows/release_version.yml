@@ -1,0 +1,142 @@
+name: Release Version
+
+env:
+  DOTNET_VERSION: 8.0
+  DOTNET_ROOT: /usr/share/dotnet
+on:
+  push
+jobs:
+  release:
+    name: Build and Release Package
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - uses: snyk/actions/setup@master
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    # Ejecutar pruebas unitarias para Payment
+    - name: Run Unit Tests for Payment
+      run: dotnet test Payment/Payment.Domain.Tests/Payment.Domain.Tests.csproj --logger trx
+
+    # Ejecutar pruebas unitarias para ATM
+    - name: Run Unit Tests for ATM
+      run: dotnet test ATM/ATM.Domain.Tests/ATM.Domain.Tests.csproj --logger trx
+
+    # Ejecutar pruebas unitarias para Comportamiento
+    - name: Run Unit Tests for Comportamiento
+      run: dotnet test Comportamiento/Comportamiento.Domain.Tests/ATM.Domain.Tests.csproj --logger trx
+
+    # Construir y empaquetar proyecto Payment
+    - name: Build and Pack Payment project
+      run: |
+        dotnet build Payment/Payment.Domain/Payment.Domain.csproj -c Release
+        dotnet pack Payment/Payment.Domain/Payment.Domain.csproj -c Release -o out
+
+    # Construir y empaquetar proyecto ATM
+    - name: Build and Pack ATM project
+      run: |
+        dotnet build ATM/ATM.Domain/ATM.Domain.csproj -c Release
+        dotnet pack ATM/ATM.Domain/ATM.Domain.csproj -c Release -o out
+
+    # Construir y empaquetar proyecto Comportamiento
+    - name: Build and Pack Comportamiento project
+      run: |
+        dotnet build Comportamiento/Comportamiento.Domain/ATM.Domain.csproj -c Release
+        dotnet pack Comportamiento/Comportamiento.Domain/ATM.Domain.csproj -c Release -o out
+
+    # Crear tag para Payment
+    - name: Create Git tag for Payment
+      run: |
+        VERSION_PAYMENT=$(grep -oP '(?<=<Version>)(.*?)(?=</Version>)' Payment/Payment.Domain/Payment.Domain.csproj)
+        echo "Payment Current Version: $VERSION_PAYMENT"
+
+        TAG_PAYMENT="v${VERSION_PAYMENT}"
+
+        # Verifica si el tag de Payment ya existe
+        while git ls-remote --tags origin "$TAG_PAYMENT" | grep -q "$TAG_PAYMENT"; do
+          echo "Tag $TAG_PAYMENT already exists. Incrementing version."
+          VERSION_PAYMENT_INCREMENTED=$(echo $VERSION_PAYMENT | awk -F. -v OFS=. '{$NF++;print}')
+          TAG_PAYMENT="v${VERSION_PAYMENT_INCREMENTED}"
+          VERSION_PAYMENT=$VERSION_PAYMENT_INCREMENTED
+          echo "New version for Payment: $TAG_PAYMENT"
+        done
+        echo "PAYMENT_NAME=$TAG_PAYMENT" >> $GITHUB_ENV
+        git tag $TAG_PAYMENT
+        git push origin $TAG_PAYMENT
+
+    # Crear tag para ATM
+    - name: Create Git tag for CustomerApp
+      run: |
+        VERSION_ATM=$(grep -oP '(?<=<Version>)(.*?)(?=</Version>)' ATM/ATM.Domain/ATM.Domain.csproj)
+        echo "ATM Current Version: $VERSION_ATM"
+
+        TAG_ATM="v${VERSION_ATM}"
+
+        # Verifica si el tag de ATM ya existe
+        while git ls-remote --tags origin "$TAG_ATM" | grep -q "$TAG_ATM"; do
+          echo "Tag $TAG_ATM already exists. Incrementing version."
+          VERSION_ATM_INCREMENTED=$(echo $VERSION_ATM | awk -F. -v OFS=. '{$NF++;print}')
+          TAG_ATM="v${VERSION_ATM_INCREMENTED}"
+          VERSION_ATM=$VERSION_ATM_INCREMENTED
+          echo "New version for ATM: $TAG_ATM"
+        done
+        echo "ATM_NAME=$TAG_ATM" >> $GITHUB_ENV
+        git tag $TAG_ATM
+        git push origin $TAG_ATM
+
+    # Crear tag para Comportamiento
+    - name: Create Git tag for Comportamiento
+      run: |
+        VERSION_COMPORTAMIENTO=$(grep -oP '(?<=<Version>)(.*?)(?=</Version>)' Comportamiento/Comportamiento.Domain/Comportamiento.Domain.csproj)
+        echo "COMPORTAMIENTO Current Version: $VERSION_COMPORTAMIENTO"
+
+        TAG_COMPORTAMIENTO="v${VERSION_COMPORTAMIENTO}"
+
+        # Verifica si el tag de Comportamiento ya existe
+        while git ls-remote --tags origin "$TAG_COMPORTAMIENTO" | grep -q "$TAG_COMPORTAMIENTO"; do
+          echo "Tag $TAG_COMPORTAMIENTO already exists. Incrementing version."
+          VERSION_COMPORTAMIENTO_INCREMENTED=$(echo $VERSION_COMPORTAMIENTO | awk -F. -v OFS=. '{$NF++;print}')
+          TAG_COMPORTAMIENTO="v${VERSION_COMPORTAMIENTO_INCREMENTED}"
+          VERSION_COMPORTAMIENTO=$VERSION_COMPORTAMIENTO_INCREMENTED
+          echo "New version for Comportamiento: $TAG_COMPORTAMIENTO"
+        done
+        echo "COMPORTAMIENTO_NAME=$TAG_COMPORTAMIENTO" >> $GITHUB_ENV
+        git tag $TAG_COMPORTAMIENTO
+        git push origin $TAG_COMPORTAMIENTO
+
+    - name: tags available
+      run: |
+        git fetch --tags
+        echo "Tags available after fetch:"
+        git tag -l
+
+    - name: Publish Release for Payment
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.NOTIFICATIONS_NAME }}
+        name: "Release ${{ env.PAYMENT_NAME }}"
+        files: out/*.nupkg
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Publish Release for ATM
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.CUSTOMERAPP_NAME }}
+        name: "Release ${{ env.ATM_NAME }}"
+        files: out/*.nupkg
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Publish Release for Comportamiento
+      uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ env.CUSTOMERAPP_NAME }}
+        name: "Release ${{ env.COMPORTAMIENTO_NAME }}"
+        files: out/*.nupkg
+        token: ${{ secrets.GH_TOKEN }}
