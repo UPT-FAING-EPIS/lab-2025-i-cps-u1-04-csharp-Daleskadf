@@ -31,7 +31,7 @@ jobs:
 
     # Ejecutar pruebas unitarias para Comportamiento
     - name: Run Unit Tests for Comportamiento
-      run: dotnet test Comportamiento/Comportamiento.Domain.Tests/ATM.Domain.Tests.csproj --logger trx
+      run: dotnet test Comportamiento/Comportamiento.Domain.Tests/Comportamiento.Domain.Tests.csproj --logger trx
 
     # Construir y empaquetar proyecto Payment
     - name: Build and Pack Payment project
